@@ -1,1 +1,1 @@
-# SMC$^2$
+# SMC<sup>2</sup>
