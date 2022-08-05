@@ -1,0 +1,63 @@
+/* File generated from [VarSizeTests/programs/test/binops.c] by PICCO Thu Jun 30 14:53:51 2022
+ */
+#include <limits.h>
+#include <float.h>
+//extern void *memcpy(void*,const void*,unsigned int);
+//# 1 "ort.onoff.defs"
+extern  "C" int   ort_initialize(int*, char***);
+ extern "C" void  ort_finalize(int);
+
+/* File generated from [VarSizeTests/programs/test/binops.c] by PICCO Thu Jun 30 14:53:51 2022
+ */
+#include "smc-compute/SMC_Utils.h"
+#include "smc-compute/LocationTracking.h"
+#include <gmp.h>
+#include <omp.h>
+
+SMC_Utils *__s;
+
+
+/* Function definition: */
+00public 32int main(00public 0int _argc_ignored, 00public 0char 00*0* _argv_ignored)
+{
+  00private 2int a = -11;
+  00private 3int b = -12;
+  00private 32int c;
+  00private 32int d;
+  3232c = 32a + 3b;
+  3232c = 32a * 3b;
+  3232c = 33b - 2a;
+  3232c = 33b / 2a;
+  3232d = 13b == 2a;
+  3232d = 13b < 2a;
+  3232d = 13b != 2a;
+  -1-1printf(-1-1"c:%d\n", -1-1smcopen(32c));
+  -1-1printf(-1"done\n");
+}
+
+/* smc-compiler generated main() */
+int main(int argc, char **argv)
+{
+
+ if(argc < 8){
+fprintf(stderr,"Incorrect input parameters\n");
+fprintf(stderr,"Usage: <id> <runtime-config> <privatekey-filename> <number-of-input-parties> <number-of-output-parties> <input-share> <output>\n");
+exit(1);
+}
+
+ std::string IO_files[atoi(argv[4]) + atoi(argv[5])];
+for(int i = 0; i < argc-6; i++)
+   IO_files[i] = argv[6+i];
+
+__s = new SMC_Utils(atoi(argv[1]), argv[2], argv[3], atoi(argv[4]), atoi(argv[5]), IO_files, 3, 1, 63, "4611686018427388039", 1);
+
+struct timeval tv1;
+struct timeval tv2;  int _xval = 0;
+
+  gettimeofday(&tv1,NULL);
+  _xval = (int) __original_main(argc, argv);
+  gettimeofday(&tv2, NULL);
+  std::cout << "Time: " << __s->time_diff(&tv1,&tv2) << std::endl;
+  return (_xval);
+}
+

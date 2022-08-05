@@ -1,0 +1,21 @@
+PRIVATE, INT, a
+current_size, 2,		 current_max, 2,		 max_size, 2
+
+PRIVATE, INT, b
+current_size, 4,		 current_max, 4,		 max_size, 4
+
+PRIVATE, INT, c
+current_size, 6,		 current_max, 6,		 max_size, 6
+
+PRIVATE, INT, x
+current_size, 2,		 current_max, 3,		 max_size, 32
+
+PRIVATE, INT, y
+current_size, 9,		 current_max, 9,		 max_size, 32
+
+PRIVATE, INT, z
+current_size, 1,		 current_max, 7,		 max_size, 32
+
+PUBLIC, INT, i
+current_size, 32,		 current_max, 32,		 max_size, 32
+

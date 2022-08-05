@@ -1,0 +1,6 @@
+bits:3
+modulus:7
+peers:3
+threshold:1
+inputs:1
+outputs:1

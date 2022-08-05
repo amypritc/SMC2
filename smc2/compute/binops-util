@@ -1,0 +1,6 @@
+bits:63
+modulus:4611686018427388039
+peers:3
+threshold:1
+inputs:1
+outputs:1
